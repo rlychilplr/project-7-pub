@@ -1,0 +1,195 @@
+body {
+    background-image: url("../images/temp/bottomScene/scene.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px -100px;
+    overflow: hidden;
+    margin: 0;
+    font-family: "Kreon", sans-serif;
+    font-weight: 400;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/temp/bottomScene/scene.png");
+    background-repeat: no-repeat;
+    background-position: 10px -598px;
+    background-size: 2028px 2048px;
+}
+
+.background-2 {
+    position: fixed;
+    top: 120px;
+    left: 600px;
+    right: 0;
+    bottom: 0;
+    width: 720px;
+    height: 530px;
+    background-image: url("../images/temp/bottomScene/scene2.png");
+    background-repeat: no-repeat;
+    background-position: 0 -500px;
+    background-size: 2048px 1024px;
+}
+
+.reward-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+h1 {
+    color: gold;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    background: #2a2a2a;
+    border: 2px solid gold;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+}
+
+.card-cost {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background: #1a1a1a;
+    border: 2px solid #4444ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.card-name {
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.card-image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.card-description {
+    text-align: center;
+    font-size: 0.9em;
+    padding: 5px;
+    flex-grow: 1;
+}
+
+.card-type {
+    text-align: center;
+    font-size: 0.8em;
+    color: #888;
+    padding-bottom: 5px;
+}
+
+button#skipBtn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button#skipBtn:hover {
+    background: #777;
+}
+
+.elite-relic-reward {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #866c3e;
+}
+
+.elite-relic-reward h2 {
+    color: #f5d16f;
+    margin-top: 0;
+    font-size: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.relic-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.relic-image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.relic-name {
+    color: gold;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.relic-description {
+    color: #cccccc;
+    font-size: 14px;
+    text-align: center;
+    max-width: 300px;
+}

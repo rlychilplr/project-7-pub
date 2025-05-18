@@ -1,0 +1,287 @@
+@startuml class diagram
+
+' Authentication System
+package Authentication {
+  class User {
+    -userId: int
+    -username: string
+    -email: string
+    -passwordHash: string
+    -createdAt: DateTime
+    -lastLoginAt: DateTime
+    +register(username: string, email: string, password: string): bool
+    +login(username: string, password: string): bool
+    +logout(): void
+  }
+
+  class UserProgress {
+    -progressId: int
+    -userId: int
+    -charactersUnlocked: array
+    -totalVictories: int
+    -totalDefeats: int
+    -highestFloorReached: int
+    -achievementsUnlocked: array
+    +saveProgress(): void
+    +loadProgress(): array
+    +updateStats(gameResult: GameResult): void
+  }
+}
+
+' Game Core
+package Core {
+  class Game {
+    -gameId: int
+    -userId: int
+    -character: Character
+    -currentFloor: int
+    -goldAmount: int
+    -deck: Deck
+    -relics: array<Relic>
+    -potions: array<Potion>
+    -state: GameState
+    +startNewGame(characterId: int): void
+    +saveGame(): void
+    +loadGame(gameId: int): bool
+    +endGame(): GameResult
+  }
+
+  class GameState {
+    -currentRoom: Room
+    -playerHealth: int
+    -playerEnergy: int
+    -drawPile: array<Card>
+    -discardPile: array<Card>
+    -exhaustPile: array<Card>
+    -handCards: array<Card>
+    +nextRoom(): Room
+    +startCombat(enemies: array<Enemy>): void
+    +endCombat(): void
+    +startTurn(): void
+    +endTurn(): void
+  }
+
+  class Room {
+    -roomType: string
+    -enemies: array<Enemy>
+    -rewards: array<Reward>
+    +enter(): void
+    +complete(): array<Reward>
+  }
+
+  enum RoomType {
+    MONSTER
+    ELITE
+    BOSS
+    REST
+    TREASURE
+    SHOP
+    EVENT
+    UNKNOWN
+  }
+
+  class GameResult {
+    -victory: bool
+    -floorsCleared: int
+    -score: int
+    -elitesDefeated: int
+    -bossesDefeated: int
+  }
+
+  class CombatManager {
+    -player: Character
+    -enemies: array<Enemy>
+    -turnNumber: int
+    -currentTurn: string
+    +playCard(card: Card, targets: array): void
+    +applyEffect(effect: Effect, target: Entity): void
+    +calculateDamage(source: Entity, target: Entity, baseDamage: int): int
+    +checkForDeaths(): void
+    +endCombat(): array<Reward>
+  }
+}
+
+' Characters
+package Characters {
+  abstract class Character {
+    #name: string
+    #maxHealth: int
+    #currentHealth: int
+    #gold: int
+    #energy: int
+    #maxEnergy: int
+    #block: int
+    #deck: Deck
+    #powers: array<Power>
+    +takeDamage(amount: int): void
+    +heal(amount: int): void
+    +gainBlock(amount: int): void
+    +gainEnergy(amount: int): void
+    +applyPower(power: Power): void
+    +removePower(powerId: string): void
+    +startTurn(): void
+    +endTurn(): void
+  }
+
+  class PlayerCharacter extends Character {
+    -characterClass: string
+    -relics: array<Relic>
+    -potions: array<Potion>
+    -gold: int
+    +playCard(card: Card, targets: array): void
+    +usePotion(potion: Potion, targets: array): void
+    +addCardToDeck(card: Card): void
+    +removeCardFromDeck(cardId: int): void
+    +addRelic(relic: Relic): void
+    +addPotion(potion: Potion): bool
+  }
+
+  class Enemy extends Character {
+    -intent: Intent
+    -possibleMoves: array<EnemyMove>
+    +decideNextMove(): Intent
+    +executeMove(): void
+    +generateRewards(): array<Reward>
+  }
+
+  class Intent {
+    -type: string
+    -value: int
+    -targets: array
+    +getDescription(): string
+  }
+
+  class EnemyMove {
+    -moveId: string
+    -damageAmount: int
+    -blockAmount: int
+    -effects: array<Effect>
+    -probability: float
+    +execute(enemy: Enemy, targets: array): void
+  }
+}
+
+' Cards
+package Cards {
+  abstract class Card {
+    #id: int
+    #name: string
+    #description: string
+    #energyCost: int
+    #rarity: string
+    #upgraded: bool
+    #cardType: string
+    +play(targets: array): void
+    +canPlay(gameState: GameState): bool
+    +upgrade(): void
+    +getDescription(): string
+  }
+
+  class AttackCard extends Card {
+    -damage: int
+    -hits: int
+    -effects: array<Effect>
+    +calculateDamage(source: Character, target: Character): int
+  }
+
+  class SkillCard extends Card {
+    -blockAmount: int
+    -effects: array<Effect>
+  }
+
+  class PowerCard extends Card {
+    -power: Power
+  }
+
+  class CurseCard extends Card {
+    -removable: bool
+  }
+
+  class Deck {
+    -cards: array<Card>
+    +addCard(card: Card): void
+    +removeCard(cardId: int): bool
+    +shuffleDeck(): void
+    +drawCards(count: int): array<Card>
+    +moveToDiscardPile(card: Card): void
+    +moveToExhaustPile(card: Card): void
+  }
+}
+
+' Effects & Powers
+package Effects {
+  class Effect {
+    -effectId: string
+    -description: string
+    -duration: int
+    -stackable: bool
+    -stackCount: int
+    +apply(target: Entity): void
+    +remove(): void
+    +tick(): void
+  }
+
+  class Power extends Effect {
+    -powerType: string
+    -icon: string
+    +onStartTurn(): void
+    +onEndTurn(): void
+    +onCardPlayed(card: Card): void
+    +modifyDamageDealt(damage: int): int
+    +modifyDamageReceived(damage: int): int
+  }
+}
+
+' Items
+package Items {
+  abstract class Item {
+    #id: int
+    #name: string
+    #description: string
+    #rarity: string
+  }
+
+  class Relic extends Item {
+    -counter: int
+    -obtained: DateTime
+    -used: bool
+    +onPickup(): void
+    +onStartCombat(): void
+    +onEndCombat(): void
+    +onStartTurn(): void
+    +onEndTurn(): void
+    +onCardPlayed(card: Card): void
+    +onDamageDealt(damage: int): int
+    +onDamageReceived(damage: int): int
+  }
+
+  class Potion extends Item {
+    -potionEffect: Effect
+    +use(targets: array): void
+    +canUse(gameState: GameState): bool
+  }
+}
+
+' Relationships
+User "1" -- "1" UserProgress
+User "1" -- "*" Game
+Game "1" -- "1" GameState
+Game "1" -- "1" PlayerCharacter
+GameState "1" -- "1" Room
+GameState "1" -- "*" Card
+Room "1" -- "*" Enemy
+PlayerCharacter "1" -- "1" Deck
+PlayerCharacter "1" -- "*" Relic
+PlayerCharacter "1" -- "*" Potion
+Card "*" -- "1" Deck
+CombatManager "1" -- "*" Enemy
+CombatManager "1" -- "1" PlayerCharacter
+Enemy "1" -- "1" Intent
+Intent "*" -- "*" EnemyMove
+Character "1" -- "*" Power
+AttackCard -- Effect
+SkillCard -- Effect
+PowerCard -- Power
+Game -- GameResult
+
+@enduml

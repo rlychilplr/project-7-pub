@@ -1,0 +1,57 @@
+header {
+    height: 70px;
+    width: 100dvw;
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/temp/images/ui/topPanel/bar.png");
+    background-size: initial;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.25rem;
+    filter: drop-shadow(0.25rem 0.25rem 0.75rem #293135);
+}
+
+header .left {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .left .header-player-name {
+    font-size: 2rem;
+}
+
+header .left .player-character {
+    color: #bfbfbf;
+}
+
+header .left .header-player-health,
+header .left .header-player-money {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* text-shadow: 1px 1px 1px #293135; */
+}
+
+header .middle {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+header .right {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}

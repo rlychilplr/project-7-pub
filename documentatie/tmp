@@ -1,0 +1,43 @@
+Als projectteamlid wil ik user stories opstellen zodat we de eisen vanuit gebruikersperspectief kunnen vastleggen en prioriteren.
+Als database ontwerper wil ik een ERD maken zodat de database optimaal gestructureerd is en redundantie wordt voorkomen.
+Als teamlid wil ik werken volgens SCRUM zodat we in iteraties kunnen werken en snel kunnen inspelen op veranderingen.
+Als teamlid wil ik een SCRUM burndown chart gebruiken zodat we de voortgang kunnen monitoren ten opzichte van de beschikbare tijd.
+Als teamlid wil ik SCRUM planning poker toepassen zodat we gezamenlijk de complexiteit van user stories kunnen inschatten.
+Als teamlid wil ik Git gebruiken zodat we versiebeheer hebben en altijd kunnen terugvallen op eerdere versies.
+Als teamlid wil ik een Definition of Fun opstellen zodat we duidelijke afspraken hebben over prettig samenwerken.
+Als teamlid wil ik een Definition of Done opstellen zodat we duidelijke criteria hebben wanneer werk af is.
+Als projectteam wil ik wireframes maken zodat we een duidelijk beeld hebben van de gebruikersinterface.
+Als projectteam wil ik activity diagrams maken zodat we de workflows in de applicatie kunnen visualiseren.
+Als projectteam wil ik class diagrams maken zodat we de structuur van de code kunnen plannen.
+Als projectteam wil ik use case diagrams maken zodat we de interacties tussen gebruikers en systeem kunnen specificeren.
+Als projectteam wil ik kaarten als classes implementeren zodat we een modulair kaartensysteem kunnen bouwen.
+Als eindgebruiker wil ik minimaal 5 verschillende kaartfunctionaliteiten hebben zodat het spel gevarieerd en interessant is.
+Als eindgebruiker wil ik 10 variaties op kaarten door eigenschappen zodat er voldoende diversiteit in het spel zit.
+Als eindgebruiker wil ik kaarten die effect hebben bij gebruik zodat de gameplay dynamisch is.
+Als projectteam wil ik abstracte classes gebruiken zodat we code kunnen hergebruiken en onderhouden.
+Als projectteam wil ik overerving toepassen zodat we efficiënt vergelijkbare functionaliteit kunnen implementeren.
+Als projectteam wil ik een gemeenschappelijke interface voor kaarten zodat we consistent met kaarten kunnen werken.
+Als eindgebruiker wil ik voortgang opslaan in de browser zodat ik mijn spel kan hervatten zonder account.
+Als projectteam wil ik game status persistent maken zodat spelers hun voortgang niet verliezen.
+Als eindgebruiker wil ik voortgang opslaan op de server zodat ik op verschillende apparaten verder kan spelen.
+Als projectteam wil ik JavaScript implementeren in classes zodat de code onderhoudbaar en herbruikbaar is.
+Als projectteam wil ik backend volgens MVC pattern zodat we een duidelijke scheiding hebben tussen data, logica en presentatie.
+Als projectteam wil ik RESTful API endpoints implementeren zodat we een gestructureerde communicatie hebben tussen front- en backend.
+
+Als eindgebruiker wil ik kunnen inloggen zodat mijn voortgang veilig wordt opgeslagen.
+Als projectteam wil ik wachtwoorden hashen en salten zodat gebruikersgegevens veilig worden opgeslagen.
+Als projectteam wil ik ORM gebruiken voor database operaties zodat we efficiënt met de database kunnen werken.
+Als projectteam wil ik routing implementeren zodat we URL's flexibel kunnen beheren.
+Als projectteam wil ik AJAX implementeren zodat we een vloeiende gebruikerservaring kunnen bieden.
+Als projectteam wil ik parallelle data structuren in PHP en JS zodat we consistent data kunnen verwerken.
+Als projectteam wil ik method overriding toepassen zodat we gedrag kunnen aanpassen per class.
+Als projectteam wil ik super keyword gebruiken zodat we correct kunnen overerven van parent classes.
+Als projectteam wil ik factory pattern voor kaarten zodat we gestructureerd kaarten kunnen aanmaken.
+Als projectteam wil ik composition over inheritance toepassen zodat de code flexibel en onderhoudbaar is.
+Als projectteam wil ik visitor pattern voor serialisatie zodat we objecten consistent kunnen omzetten naar data.
+Als projectteam wil ik strategy pattern met builder voor deserialisatie zodat we flexibel objecten kunnen reconstrueren.
+Als projectteam wil ik dependency injection in frontend zodat we verschillende implementaties kunnen wisselen.
+Als projectteam wil ik browser storage via dependency injection zodat we lokaal data kunnen beheren.
+Als projectteam wil ik SOLID principes toepassen zodat de code onderhoudbaar en uitbreidbaar is.
+Als projectteam wil ik multiple interfaces implementeren zodat we functionaliteit logisch kunnen groeperen.
+Als projectteam wil ik acceptatietests schrijven zodat we kunnen valideren dat de code aan de eisen voldoet.

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Kreon";
+    src:
+        url("../webfonts/Kreon-VariableFont_wght.woff2") format("woff2"),
+        url("../webfonts/Kreon-VariableFont_wght.ttf") format("truetype");
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+}

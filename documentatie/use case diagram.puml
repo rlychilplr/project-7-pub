@@ -1,0 +1,71 @@
+@startuml use case diagram
+
+left to right direction
+skinparam actorStyle awesome
+
+:Player: as player
+:Enemy AI: as enemy
+
+rectangle "Card Game System" {
+    package "Combat" {
+        usecase "Start Combat" as UC1
+        usecase "Play Cards" as UC2
+        usecase "End Turn" as UC3
+        usecase "View Enemy Intentions" as UC4
+        usecase "Take Damage" as UC5
+        usecase "Apply Block" as UC6
+    }
+
+    package "Deck Management" {
+        usecase "View Deck" as UC7
+        usecase "Draw Cards" as UC8
+        usecase "Discard Cards" as UC9
+        usecase "Shuffle Deck" as UC10
+    }
+
+    package "Resource Management" {
+        usecase "Manage Energy" as UC11
+        usecase "Track Health" as UC12
+        usecase "Handle Status Effects" as UC13
+    }
+
+    package "Game Progress" {
+        usecase "View Combat Stats" as UC14
+        usecase "Check Victory Conditions" as UC15
+        usecase "Check Defeat Conditions" as UC16
+    }
+}
+
+' Player interactions
+player --> UC1
+player --> UC2
+player --> UC3
+player --> UC4
+player --> UC7
+player --> UC11
+player --> UC14
+
+' Enemy AI interactions
+enemy --> UC2
+enemy --> UC5
+enemy --> UC13
+
+' Include relationships
+UC2 ..> UC11 : <<include>>
+UC2 ..> UC5 : <<include>>
+UC2 ..> UC6 : <<include>>
+UC2 ..> UC13 : <<include>>
+
+UC3 ..> UC9 : <<include>>
+UC3 ..> UC8 : <<include>>
+
+' Extend relationships
+UC15 <.. UC14 : <<extend>>
+UC16 <.. UC14 : <<extend>>
+UC10 <.. UC8 : <<extend>>
+
+' Dependencies between use cases
+UC8 ..> UC7 : <<depend>>
+UC9 ..> UC7 : <<depend>>
+
+@enduml

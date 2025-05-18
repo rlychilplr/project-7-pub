@@ -1,0 +1,116 @@
+body {
+    background-image: url("../images/temp/bottomScene/scene.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px -100px;
+    overflow: hidden;
+    margin: 0;
+    font-family: "Kreon", sans-serif;
+    font-weight: 400;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/temp/bottomScene/scene.png");
+    background-repeat: no-repeat;
+    background-position: 10px -598px;
+    background-size: 2028px 2048px;
+}
+
+.background-2 {
+    position: fixed;
+    top: 120px;
+    left: 600px;
+    right: 0;
+    bottom: 0;
+    width: 720px;
+    height: 530px;
+    background-image: url("../images/temp/bottomScene/scene2.png");
+    background-repeat: no-repeat;
+    background-position: 0 -500px;
+    background-size: 2048px 1024px;
+}
+
+.game-over-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+h1 {
+    color: #ff4444;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.stats {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid #444;
+}
+
+.stat-label {
+    font-weight: bold;
+    color: #aaa;
+}
+
+.stat-value {
+    color: #fff;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #777;
+}
+
+button:first-child {
+    background-color: #4caf50;
+}
+
+button:first-child:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,112 @@
+.treasure-container {
+    text-align: center;
+}
+
+.treasure-chest {
+    margin: 30px auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.treasure-chest:hover {
+    transform: scale(1.05);
+}
+
+#chest-image {
+    width: 200px;
+    height: auto;
+}
+
+#chest-image.opened {
+    animation: open-chest 1s forwards;
+}
+
+@keyframes open-chest {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1) rotate(5deg);
+    }
+    100% {
+        transform: scale(1.2) rotate(10deg);
+    }
+}
+
+.relic-container {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+    animation: fade-in 1s forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.relic-image {
+    width: 128px;
+    height: 128px;
+    margin: 0 auto;
+    display: block;
+}
+
+.relic-name {
+    font-size: 24px;
+    color: gold;
+    margin: 10px 0;
+}
+
+.relic-description {
+    font-size: 16px;
+    margin: 10px 0 30px;
+}
+
+.gold-container {
+    margin: 30px auto;
+    animation: bounce 2s infinite;
+}
+
+.gold-image {
+    width: 100px;
+    height: auto;
+}
+
+.gold-amount {
+    font-size: 24px;
+    color: gold;
+    text-shadow: 1px 1px 2px black;
+    margin: 10px 0;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#continue-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#continue-btn:hover {
+    background: #45a049;
+}

@@ -1,0 +1,861 @@
+[class^="status-"] {
+    background-image: url("../images/temp/powers/powers.png");
+    background-size: 2028px 1024px;
+    display: inline-block;
+}
+
+.icon {
+    position: relative;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.status-value {
+    position: absolute;
+    bottom: 0px;
+    right: -4px;
+    background: #333;
+    color: white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+}
+
+.status-accuracy {
+    width: 34px;
+    height: 34px;
+    background-position: -436px -507px;
+}
+
+.status-afterImage {
+    width: 34px;
+    height: 20px;
+    background-position: -508px -504px;
+}
+
+.status-ai {
+    width: 33px;
+    height: 33px;
+    background-position: -1745px -642px;
+}
+
+.status-amplify {
+    width: 32px;
+    height: 32px;
+    background-position: -544px -455px;
+}
+
+.status-anger {
+    width: 34px;
+    height: 34px;
+    background-position: -1153px -721px;
+}
+
+.status-armor {
+    width: 34px;
+    height: 33px;
+    background-position: -1972px -772px;
+}
+
+.status-artifact {
+    width: 32px;
+    height: 33px;
+    background-position: -612px -501px;
+}
+
+.status-attackBurn {
+    width: 33px;
+    height: 33px;
+    background-position: -1781px -642px;
+}
+
+.status-backAttack {
+    width: 34px;
+    height: 34px;
+    background-position: -1116px -684px;
+}
+
+.status-backAttack2 {
+    width: 34px;
+    height: 34px;
+    background-position: -1189px -721px;
+}
+
+.status-barricade {
+    width: 33px;
+    height: 27px;
+    background-position: -908px -642px;
+}
+
+.status-beat {
+    width: 34px;
+    height: 31px;
+    background-position: -1115px -651px;
+}
+
+.status-berserk {
+    width: 33px;
+    height: 33px;
+    background-position: -1815px -642px;
+}
+
+.status-bias {
+    width: 30px;
+    height: 29px;
+    background-position: -875px -607px;
+}
+
+.status-blur {
+    width: 32px;
+    height: 32px;
+    background-position: -612px -467px;
+}
+
+.status-book {
+    width: 30px;
+    height: 34px;
+    background-position: -544px -597px;
+}
+
+.status-brutality {
+    width: 28px;
+    height: 33px;
+    background-position: -779px -538px;
+}
+
+.status-buffer {
+    width: 34px;
+    height: 33px;
+    background-position: -1362px -721px;
+}
+
+.status-burst {
+    width: 34px;
+    height: 22px;
+    background-position: -1975px -712px;
+}
+
+.status-cExplosion {
+    width: 34px;
+    height: 31px;
+    background-position: -1968px -643px;
+}
+
+.status-carddraw {
+    width: 24px;
+    height: 33px;
+    background-position: -875px -541px;
+}
+
+.status-channel {
+    width: 34px;
+    height: 32px;
+    background-position: -1326px -687px;
+}
+
+.status-choke {
+    width: 32px;
+    height: 34px;
+    background-position: -542px -561px;
+}
+
+.status-closeUp {
+    width: 34px;
+    height: 30px;
+    background-position: -1288px -667px;
+}
+
+.status-combust {
+    width: 31px;
+    height: 30px;
+    background-position: -843px -541px;
+}
+
+.status-confusion {
+    width: 34px;
+    height: 31px;
+    background-position: -1504px -687px;
+}
+
+.status-conserve {
+    width: 30px;
+    height: 34px;
+    background-position: -611px -608px;
+}
+
+.status-constricted {
+    width: 30px;
+    height: 34px;
+    background-position: -613px -572px;
+}
+
+.status-controlled_change {
+    width: 34px;
+    height: 32px;
+    background-position: -1361px -687px;
+}
+
+.status-corruption {
+    width: 42px;
+    height: 34px;
+    background-position: -427px -774px;
+}
+
+.status-curiosity {
+    width: 26px;
+    height: 32px;
+    background-position: -814px -471px;
+}
+
+.status-darkembrace {
+    width: 34px;
+    height: 37px;
+    background-position: -1973px -807px;
+}
+
+.status-defenseNext {
+    width: 34px;
+    height: 34px;
+    background-position: -1225px -721px;
+}
+
+.status-demonForm {
+    width: 34px;
+    height: 33px;
+    background-position: -1397px -721px;
+}
+
+.status-deva {
+    width: 34px;
+    height: 21px;
+    background-position: -1325px -664px;
+}
+
+.status-deva2 {
+    width: 32px;
+    height: 34px;
+    background-position: -543px -525px;
+}
+
+.status-devotion {
+    width: 33px;
+    height: 31px;
+    background-position: -774px -607px;
+}
+
+.status-dexterity {
+    width: 32px;
+    height: 33px;
+    background-position: -678px -537px;
+}
+
+.status-doubleDamage {
+    width: 33px;
+    height: 31px;
+    background-position: -579px -434px;
+}
+
+.status-doubleTap {
+    width: 34px;
+    height: 30px;
+    background-position: -1358px -655px;
+}
+
+.status-draw {
+    width: 24px;
+    height: 33px;
+    background-position: -817px -436px;
+}
+
+.status-draw2 {
+    width: 24px;
+    height: 33px;
+    background-position: -877px -506px;
+}
+
+.status-echo {
+    width: 32px;
+    height: 32px;
+    background-position: -644px -467px;
+}
+
+.status-end_turn_death {
+    width: 27px;
+    height: 32px;
+    background-position: -1258px -688px;
+}
+
+.status-energized_blue {
+    width: 34px;
+    height: 34px;
+    background-position: -471px -507px;
+}
+
+.status-energized_green {
+    width: 32px;
+    height: 32px;
+    background-position: -682px -433px;
+}
+
+.status-entangle {
+    width: 33px;
+    height: 34px;
+    background-position: -509px -468px;
+}
+
+.status-envenom {
+    width: 33px;
+    height: 33px;
+    background-position: -578px -501px;
+}
+
+.status-establishment {
+    width: 33px;
+    height: 26px;
+    background-position: -943px -643px;
+}
+
+.status-evolve {
+    width: 31px;
+    height: 34px;
+    background-position: -1849px -641px;
+}
+
+.status-explosive {
+    width: 34px;
+    height: 31px;
+    background-position: -1394px -654px;
+}
+
+.status-fading {
+    width: 32px;
+    height: 34px;
+    background-position: -647px -501px;
+}
+
+.status-fasting {
+    width: 32px;
+    height: 31px;
+    background-position: -806px -573px;
+}
+
+.status-firebreathing {
+    width: 33px;
+    height: 35px;
+    background-position: -473px -543px;
+}
+
+.status-flameBarrier {
+    width: 32px;
+    height: 32px;
+    background-position: -713px -434px;
+}
+
+.status-flex {
+    width: 32px;
+    height: 34px;
+    background-position: -544px -489px;
+}
+
+.status-flight {
+    width: 32px;
+    height: 33px;
+    background-position: -644px -536px;
+}
+
+.status-focus {
+    width: 30px;
+    height: 29px;
+    background-position: -875px -576px;
+}
+
+.status-forcefield {
+    width: 26px;
+    height: 34px;
+    background-position: -708px -608px;
+}
+
+.status-frail {
+    width: 32px;
+    height: 30px;
+    background-position: -845px -640px;
+}
+
+.status-fumes {
+    width: 34px;
+    height: 34px;
+    background-position: -508px -634px;
+}
+
+.status-heartDef {
+    width: 34px;
+    height: 31px;
+    background-position: -1430px -654px;
+}
+
+.status-heatsink {
+    width: 32px;
+    height: 30px;
+    background-position: -842px -509px;
+}
+
+.status-hello {
+    width: 32px;
+    height: 33px;
+    background-position: -679px -502px;
+}
+
+.status-hex {
+    width: 32px;
+    height: 32px;
+    background-position: -752px -434px;
+}
+
+.status-hymn {
+    width: 33px;
+    height: 30px;
+    background-position: -811px -640px;
+}
+
+.status-infiniteBlades {
+    width: 34px;
+    height: 34px;
+    background-position: -508px -598px;
+}
+
+.status-infinitegreen {
+    width: 36px;
+    height: 22px;
+    background-position: -1288px -699px;
+}
+
+.status-int {
+    width: 32px;
+    height: 34px;
+    background-position: -643px -608px;
+}
+
+.status-intangible {
+    width: 32px;
+    height: 32px;
+    background-position: -783px -434px;
+}
+
+.status-juggernaut {
+    width: 32px;
+    height: 31px;
+    background-position: -841px -573px;
+}
+
+.status-lessdraw {
+    width: 24px;
+    height: 33px;
+    background-position: -1040px -634px;
+}
+
+.status-like_water {
+    width: 33px;
+    height: 33px;
+    background-position: -636px -644px;
+}
+
+.status-lockon {
+    width: 34px;
+    height: 34px;
+    background-position: -508px -562px;
+}
+
+.status-loop {
+    width: 34px;
+    height: 33px;
+    background-position: -1434px -721px;
+}
+
+.status-magnet {
+    width: 34px;
+    height: 32px;
+    background-position: -1397px -687px;
+}
+
+.status-malleable {
+    width: 31px;
+    height: 32px;
+    background-position: -810px -505px;
+}
+
+.status-mantra {
+    width: 33px;
+    height: 32px;
+    background-position: -773px -573px;
+}
+
+.status-master_protect {
+    width: 28px;
+    height: 33px;
+    background-position: -780px -503px;
+}
+
+.status-master_reality {
+    width: 36px;
+    height: 31px;
+    background-position: -1288px -723px;
+}
+
+.status-master_smite {
+    width: 27px;
+    height: 33px;
+    background-position: -1267px -722px;
+}
+
+.status-mastery {
+    width: 32px;
+    height: 35px;
+    background-position: -509px -431px;
+}
+
+.status-mayhem {
+    width: 32px;
+    height: 35px;
+    background-position: -517px -373px;
+}
+
+.status-mental_fortress {
+    width: 33px;
+    height: 32px;
+    background-position: -578px -467px;
+}
+
+.status-minion {
+    width: 25px;
+    height: 32px;
+    background-position: -1012px -635px;
+}
+
+.status-modeShift {
+    width: 32px;
+    height: 32px;
+    background-position: -807px -606px;
+}
+
+.status-nightmare {
+    width: 34px;
+    height: 29px;
+    background-position: -737px -642px;
+}
+
+.status-nirvana {
+    width: 32px;
+    height: 33px;
+    background-position: -714px -503px;
+}
+
+.status-noBlock {
+    width: 34px;
+    height: 34px;
+    background-position: -508px -526px;
+}
+
+.status-noDraw {
+    width: 33px;
+    height: 34px;
+    background-position: -566px -644px;
+}
+
+.status-noPain {
+    width: 34px;
+    height: 33px;
+    background-position: -1468px -721px;
+}
+
+.status-no_skill {
+    width: 32px;
+    height: 33px;
+    background-position: -748px -538px;
+}
+
+.status-no_stance {
+    width: 33px;
+    height: 34px;
+    background-position: -601px -644px;
+}
+
+.status-noattack {
+    width: 34px;
+    height: 34px;
+    background-position: -1972px -736px;
+}
+
+.status-omega {
+    width: 34px;
+    height: 32px;
+    background-position: -1434px -687px;
+}
+
+.status-painfulStabs {
+    width: 28px;
+    height: 34px;
+    background-position: -1610px -647px;
+}
+
+.status-panache {
+    width: 34px;
+    height: 34px;
+    background-position: -1505px -720px;
+}
+
+.status-path_to_victory {
+    width: 35px;
+    height: 33px;
+    background-position: -337px -898px;
+}
+
+.status-penNib {
+    width: 20px;
+    height: 35px;
+    background-position: -544px -633px;
+}
+
+.status-phantasmal {
+    width: 34px;
+    height: 32px;
+    background-position: -1468px -687px;
+}
+
+.status-platedarmor {
+    width: 33px;
+    height: 34px;
+    background-position: -575px -608px;
+}
+
+.status-poison {
+    width: 35px;
+    height: 33px;
+    background-position: -1326px -721px;
+}
+
+.status-pressure_points {
+    width: 32px;
+    height: 33px;
+    background-position: -749px -503px;
+}
+
+.status-reactive {
+    width: 33px;
+    height: 34px;
+    background-position: -578px -572px;
+}
+
+.status-rebound {
+    width: 32px;
+    height: 32px;
+    background-position: -841px -606px;
+}
+
+.status-regen {
+    width: 33px;
+    height: 33px;
+    background-position: -668px -644px;
+}
+
+.status-regrow {
+    width: 34px;
+    height: 34px;
+    background-position: -1988px -668px;
+}
+
+.status-repair {
+    width: 34px;
+    height: 34px;
+    background-position: -1481px -651px;
+}
+
+.status-retain {
+    width: 33px;
+    height: 33px;
+    background-position: -706px -644px;
+}
+
+.status-ritual {
+    width: 32px;
+    height: 32px;
+    background-position: -810px -539px;
+}
+
+.status-rupture {
+    width: 28px;
+    height: 32px;
+    background-position: -882px -638px;
+}
+
+.status-rushdown {
+    width: 34px;
+    height: 34px;
+    background-position: -1502px -651px;
+}
+
+.status-sadistic {
+    width: 34px;
+    height: 30px;
+    background-position: -1540px -651px;
+}
+
+.status-shackle {
+    width: 34px;
+    height: 34px;
+    background-position: -1638px -644px;
+}
+
+.status-sharpHide {
+    width: 33px;
+    height: 31px;
+    background-position: -612px -434px;
+}
+
+.status-shift {
+    width: 34px;
+    height: 33px;
+    background-position: -1638px -643px;
+}
+
+.status-slow {
+    width: 31px;
+    height: 24px;
+    background-position: -517px -347px;
+}
+
+.status-split {
+    width: 34px;
+    height: 19px;
+    background-position: -509px -410px;
+}
+
+.status-sporeCloud {
+    width: 32px;
+    height: 34px;
+    background-position: -675px -608px;
+}
+
+.status-stasis {
+    width: 32px;
+    height: 33px;
+    background-position: -681px -467px;
+}
+
+.status-static_discharge {
+    width: 32px;
+    height: 33px;
+    background-position: -713px -468px;
+}
+
+.status-storm {
+    width: 34px;
+    height: 34px;
+    background-position: -1674px -643px;
+}
+
+.status-strength {
+    width: 35px;
+    height: 35px;
+    background-position: -436px -543px;
+}
+
+.status-surrounded {
+    width: 34px;
+    height: 18px;
+    background-position: -543px -435px;
+}
+
+.status-swivel {
+    width: 33px;
+    height: 26px;
+    background-position: -978px -641px;
+}
+
+.status-talk_to_hand {
+    width: 25px;
+    height: 33px;
+    background-position: -745px -573px;
+}
+
+.status-the_bomb {
+    width: 33px;
+    height: 33px;
+    background-position: -710px -573px;
+}
+
+.status-thievery {
+    width: 32px;
+    height: 34px;
+    background-position: -645px -572px;
+}
+
+.status-thorns {
+    width: 34px;
+    height: 33px;
+    background-position: -1710px -642px;
+}
+
+.status-thousandCuts {
+    width: 33px;
+    height: 34px;
+    background-position: -578px -536px;
+}
+
+.status-time {
+    width: 33px;
+    height: 33px;
+    background-position: -711px -538px;
+}
+
+.status-tools {
+    width: 32px;
+    height: 33px;
+    background-position: -746px -468px;
+}
+
+.status-unawakened {
+    width: 32px;
+    height: 33px;
+    background-position: -782px -468px;
+}
+
+.status-vigor {
+    width: 32px;
+    height: 34px;
+    background-position: -678px -572px;
+}
+
+.status-vulnerable {
+    width: 34px;
+    height: 31px;
+    background-position: -775px -640px;
+}
+
+.status-wave_of_the_hand {
+    width: 33px;
+    height: 31px;
+    background-position: -649px -434px;
+}
+
+.status-weak {
+    width: 42px;
+    height: 26px;
+    background-position: -504px -670px;
+}
+
+.status-wireheading {
+    width: 34px;
+    height: 32px;
+    background-position: -737px -608px;
+}
+
+.status-wraithForm {
+    width: 35px;
+    height: 35px;
+    background-position: -1115px -720px;
+}

@@ -1,0 +1,358 @@
+body {
+    background-image: url("../images/temp/bottomScene/scene.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px -100px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/temp/bottomScene/scene.png");
+    background-repeat: no-repeat;
+    background-position: 10px -598px;
+    background-size: 2028px 2048px;
+}
+
+.background-2 {
+    position: fixed;
+    top: 120px;
+    left: 600px;
+    right: 0;
+    bottom: 0;
+    width: 720px;
+    height: 530px;
+    background-image: url("../images/temp/bottomScene/scene2.png");
+    background-repeat: no-repeat;
+    background-position: 0 -500px;
+    background-size: 2048px 1024px;
+}
+
+/* player */
+.player {
+    position: relative;
+    z-index: 10;
+    top: 43vh;
+    left: 6vw;
+    width: fit-content;
+    color: #fefefe;
+}
+
+.player-health {
+    position: relative;
+    left: 10rem;
+    width: 10rem;
+    height: 0.8rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+}
+.player-health-bar {
+    height: 0.75rem;
+    background-color: rgba(255, 0, 0, 1);
+    border-radius: 25px;
+}
+
+.player-health-value {
+    position: relative;
+    top: -1rem;
+    left: 3rem;
+}
+
+.player-status {
+    position: relative;
+    left: 10rem;
+    width: fit-content;
+}
+
+/* enemy */
+.enemy {
+    position: relative;
+    text-align: center;
+    z-index: 10;
+    top: 1vh;
+    left: 25vw;
+}
+
+.enemy-image {
+    width: 300px;
+    height: auto;
+}
+
+.enemy-health {
+    position: relative;
+    width: 10rem;
+    height: 0.8rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    margin: 10px auto;
+}
+
+.enemy-health-bar {
+    height: 0.75rem;
+    background-color: rgba(255, 0, 0, 1);
+    border-radius: 25px;
+}
+
+.enemy-health-value {
+    position: relative;
+    top: -1rem;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.enemy-name {
+    font-size: 24px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    margin-top: 10px;
+}
+
+.enemy-status {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.hand {
+    position: fixed;
+    bottom: -20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    z-index: 20;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    background: #2a2a2a;
+    border: 2px solid gold;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+    position: relative; /* Add this to make absolute positioning work relative to card */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card:hover {
+    transform: translateY(-175px);
+}
+
+.card-cost {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background: #1a1a1a;
+    border: 2px solid #4444ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 1; /* Ensure it stays on top */
+}
+
+.card-name {
+    margin-top: 30px; /* Make room for cost */
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.card-image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.card-description {
+    text-align: center;
+    font-size: 0.9em;
+    padding: 5px;
+    flex-grow: 1; /* Take up remaining space */
+}
+
+.card-type {
+    text-align: center;
+    font-size: 0.8em;
+    color: #888;
+    padding-bottom: 5px;
+}
+
+.player-energy {
+    position: relative;
+    left: 10rem;
+    margin-top: 1rem;
+}
+
+.energy-orb {
+    width: 3rem;
+    height: 3rem;
+    background: radial-gradient(circle at 30% 30%, #4444ff, #000066);
+    border: 2px solid #6666ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px #6666ff;
+    box-shadow: 0 0 10px #4444ff;
+}
+
+.energy-value {
+    color: #ffffff;
+}
+
+.energy-separator {
+    margin: 0 0.2rem;
+    color: #8888ff;
+}
+
+.energy-max {
+    color: #8888ff;
+}
+
+.enemy-intent {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.intent-icon {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.intent-description {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.end-turn-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 20;
+}
+
+#endTurnBtn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#endTurnBtn:hover {
+    background: #45a049;
+}
+
+#endTurnBtn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+.player-block {
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    z-index: 2;
+}
+
+.block-value {
+    background: #4444ff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    border: 2px solid #6666ff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.player-relics {
+    position: absolute;
+    top: -70px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 25vw;
+}
+
+.relic-icon {
+    position: relative;
+    width: 96px;
+    height: 96px;
+}
+
+.relic-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.relic-counter {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    width: 15px;
+    height: 15px;
+    background: #333;
+    border: 1px solid gold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: white;
+}
+
+.enemy-block {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+.enemy-block .block-value {
+    background: #4444ff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    border: 2px solid #6666ff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}

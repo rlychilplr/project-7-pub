@@ -1,0 +1,280 @@
+[class^="boot"],
+[class^="glove"],
+[class^="hand"],
+[class^="pauldron"],
+.eye,
+.hair,
+.helmet,
+.neck,
+.pants,
+.shirt,
+.sword {
+    background-image: url("../images/temp/images/characters/ironclad/idle/ironclad.png");
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.character-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.character {
+    position: relative;
+    width: 340px;
+    height: 300px;
+    transform-origin: center;
+}
+
+.body-parts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+}
+
+/* Shadow at the bottom */
+.shadow {
+    width: 306px;
+    height: 35px;
+    background-position: -136px -76px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Core body - Hips are the root */
+.pants {
+    width: 132px;
+    height: 84px;
+    background-position: -2px -27px;
+    top: 120px;
+    left: 107px;
+    z-index: 3;
+}
+
+.shirt {
+    width: 96px;
+    height: 98px;
+    background-position: -444px -13px;
+    top: 70px;
+    left: 123px;
+    z-index: 4;
+}
+
+.neck {
+    width: 33px;
+    height: 33px;
+    background-position: -327px -10px;
+    top: 53px;
+    left: 154px;
+    z-index: 5;
+}
+
+/* Legs based on skeleton positions */
+.leg.right .boot {
+    width: 47px;
+    height: 63px;
+    background-position: -542px -11px;
+    top: 190px; /* Moved up to connect with pants */
+    left: 160px;
+    transform: rotate(90deg);
+    z-index: 2;
+}
+
+.leg.left .boot {
+    width: 51px;
+    height: 67px;
+    background-position: -542px -60px;
+    top: 190px; /* Moved up to connect with pants */
+    left: 100px;
+    transform: rotate(90deg);
+    z-index: 2;
+}
+
+/* Arms and pauldrons - closer to shirt edges */
+.arm.left .pauldron {
+    width: 37px;
+    height: 33px;
+    background-position: -292px -6px;
+    top: 81px;
+    left: 173px; /* Adjusted to sit right at shirt edge */
+    transform: rotate(90deg);
+    z-index: 6;
+}
+
+.arm.left .pauldron-low {
+    width: 30px;
+    height: 20px;
+    background-position: -2px -5px;
+    top: 91px;
+    left: 177px;
+    z-index: 5;
+}
+
+.arm.right .pauldron {
+    width: 40px;
+    height: 31px;
+    background-position: -259px -3px;
+    top: 81px;
+    left: 116px; /* Adjusted to sit right at shirt edge */
+    transform: rotate(90deg);
+    z-index: 6;
+}
+
+.arm.right .pauldron-low {
+    width: 30px;
+    height: 20px;
+    background-position: -34px -5px;
+    top: 91px;
+    left: 116px;
+    z-index: 5;
+}
+
+/* Creating a visual arm connection by placing gloves closer to pauldrons */
+.arm.left .glove {
+    width: 28px;
+    height: 19px;
+    background-position: -66px -6px;
+    top: 115px; /* Moved closer to pauldron */
+    left: 180px;
+    z-index: 7;
+}
+
+.arm.right .glove {
+    width: 41px;
+    height: 40px;
+    background-position: -169px -2px;
+    top: 115px; /* Moved closer to pauldron */
+    left: 95px;
+    transform: rotate(90deg);
+    z-index: 7;
+}
+
+/* Hands positioned directly adjacent to gloves */
+.arm.left .hand {
+    width: 23px;
+    height: 23px;
+    background-position: -96px -2px;
+    top: 133px; /* Immediately below glove */
+    left: 182px;
+    z-index: 9;
+}
+
+.arm.right .hand {
+    width: 24px;
+    height: 19px;
+    background-position: -121px -6px;
+    top: 133px; /* Immediately below glove */
+    left: 102px;
+    z-index: 9;
+}
+
+/* Sword positioned to appear held by right hand */
+.arm.right .sword {
+    width: 242px;
+    height: 29px;
+    background-position: -136px -45px;
+    top: 135px;
+    left: 90px;
+    transform: rotate(-15deg);
+    transform-origin: 90% 50%; /* Rotates from hand connection point */
+    z-index: 8;
+}
+
+/* Head connected to neck */
+.head {
+    width: 31px;
+    height: 46px;
+    background-position: -211px -12px;
+    top: 18px;
+    left: 153px;
+    transform: rotate(90deg);
+    z-index: 10;
+}
+
+.hair {
+    width: 31px;
+    height: 46px;
+    background-position: -211px -12px;
+    top: 18px;
+    left: 148px;
+    transform: rotate(90deg);
+    z-index: 10;
+}
+
+.head .helmet {
+    width: 51px;
+    height: 46px;
+    background-position: -380px -28px;
+    top: 22px; /* Moved down to meet the neck */
+    left: 145px;
+    z-index: 11;
+}
+
+.head .eye {
+    width: 21px;
+    height: 20px;
+    background-position: -147px -5px;
+    top: 35px;
+    left: 155px;
+    transform: rotate(90deg);
+    z-index: 12;
+}
+
+/* Position the actual body part containers */
+.head,
+.torso,
+.arms,
+.legs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.arm,
+.leg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Animation for idle breathing effect */
+@keyframes idle-breathing {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.body-parts {
+    animation: idle-breathing 4s ease-in-out infinite;
+}
+
+/* Specific animation offsets for different parts to create a more natural look */
+.head {
+    animation: idle-breathing 4s ease-in-out infinite;
+    animation-delay: -0.2s;
+}
+
+.arm.left {
+    animation: idle-breathing 4s ease-in-out infinite;
+    animation-delay: -0.15s;
+}
+
+.arm.right {
+    animation: idle-breathing 4s ease-in-out infinite;
+    animation-delay: -0.25s;
+}

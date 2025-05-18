@@ -1,0 +1,63 @@
+@startuml activity diagram
+
+start
+
+:Initialize Combat;
+:Player Draws Starting Hand;
+
+while (Combat Active?) is (yes)
+  'Player Turn
+  partition "Player Turn" {
+    :Refresh Player Energy;
+    :Draw Cards (if hand not full);
+
+    while (Player Has Energy & Cards?) is (yes)
+      :Display Available Actions;
+
+      if (Player Selects Card?) then (yes)
+        if (Enough Energy?) then (yes)
+          :Select Target;
+          :Play Card;
+          :Reduce Energy;
+          :Move Card to Discard Pile;
+        else (no)
+          :Show "Not Enough Energy";
+        endif
+      else (end turn)
+        break
+      endif
+    endwhile
+
+    :Discard Remaining Hand;
+  }
+
+  'Check for Combat End
+  if (All Enemies Dead?) then (yes)
+    :Combat Victory;
+    stop
+  elseif (Player Dead?) then (yes)
+    :Combat Defeat;
+    stop
+  endif
+
+  'Enemy Turn
+  partition "Enemy Turn" {
+    :Display Enemy Intentions;
+
+    while (Enemies Alive?) is (yes)
+      :Execute Enemy Action;
+      if (Player Dead?) then (yes)
+        :Combat Defeat;
+        stop
+      endif
+    endwhile
+  }
+
+  'End Turn Processing
+  :Process End of Turn Effects;
+  :Update Status Effects;
+endwhile (no)
+
+stop
+
+@enduml

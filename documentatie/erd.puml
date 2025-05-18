@@ -1,0 +1,80 @@
+@startuml erd
+
+!define table(x) class x << (T,#FFAAAA) >>
+!define primary_key(x) <u>x</u>
+!define foreign_key(x) <i>x</i>
+
+table(players) {
+    primary_key(player_id): INT
+    username: VARCHAR(50)
+    email: VARCHAR(100)
+    password_hash: VARCHAR(255)
+    created_at: TIMESTAMP
+    last_login: TIMESTAMP
+}
+
+table(characters) {
+    primary_key(character_id): INT
+    name: VARCHAR(50)
+    base_hp: INT
+}
+
+table(cards) {
+    primary_key(card_id): INT
+    name: VARCHAR(50)
+    type: VARCHAR(20)
+    rarity: VARCHAR(20)
+    energy_cost: INT
+    description: TEXT
+    foreign_key(character_id): INT
+    is_starter: BOOLEAN
+    starter_quantity: INT
+}
+
+table(relics) {
+    primary_key(relic_id): INT
+    name: VARCHAR(50)
+    description: TEXT
+    rarity: VARCHAR(20)
+    effect_type: VARCHAR(50)
+}
+
+table(enemies) {
+    primary_key(enemy_id): INT
+    name: VARCHAR(50)
+    hp: INT
+    type: VARCHAR(20)
+}
+
+table(runs) {
+    primary_key(run_id): INT
+    foreign_key(player_id): INT
+    foreign_key(character_id): INT
+    start_time: TIMESTAMP
+    end_time: TIMESTAMP
+    floor_reached: INT
+    victory: BOOLEAN
+    score: INT
+    ascension_level: INT
+}
+
+table(run_details) {
+    primary_key(detail_id): INT
+    foreign_key(run_id): INT
+    floor: INT
+    detail_type: VARCHAR(20)
+    foreign_key(card_id): INT
+    foreign_key(relic_id): INT
+    encounter_type: VARCHAR(20)
+    quantity: INT
+    result: VARCHAR(20)
+}
+
+players "1" -- "*" runs
+characters "1" -- "*" runs
+characters "1" -- "*" cards
+runs "1" -- "*" run_details
+cards "1" -- "*" run_details
+relics "1" -- "*" run_details
+
+@enduml

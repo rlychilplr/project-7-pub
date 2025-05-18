@@ -1,0 +1,127 @@
+body {
+    background-image: url("../images/temp/bottomScene/scene.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px -100px;
+    overflow: hidden;
+    margin: 0;
+    font-family: "Kreon", sans-serif;
+    font-weight: 400;
+    background-color: #222;
+    color: #fff;
+    min-height: 100vh;
+    padding: 0; /* Remove padding */
+}
+
+/* Add a container for proper layout */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    z-index: 10;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/temp/bottomScene/scene.png");
+    background-repeat: no-repeat;
+    background-position: 10px -598px;
+    background-size: 2028px 2048px;
+    z-index: 1;
+}
+
+.background-2 {
+    position: fixed;
+    top: 120px;
+    left: 600px;
+    right: 0;
+    bottom: 0;
+    width: 720px;
+    height: 530px;
+    background-image: url("../images/temp/bottomScene/scene2.png");
+    background-repeat: no-repeat;
+    background-position: 0 -500px;
+    background-size: 2048px 1024px;
+    z-index: 2;
+}
+
+.rest-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 25%;
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+    z-index: 10;
+    flex: 1;
+}
+
+h1 {
+    color: #ffd700;
+    margin-bottom: 1.5rem;
+}
+
+.campfire {
+    margin: 1.5rem 0;
+}
+
+.campfire-image {
+    width: 150px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #ff6600);
+}
+
+.rest-message {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.health-info {
+    margin: 2rem 0;
+}
+
+.health-bar-container {
+    width: 80%;
+    height: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.health-bar {
+    height: 100%;
+    background-color: #ff4444;
+    transition: width 0.5s ease;
+}
+
+.health-text {
+    margin: 0.5rem 0 1.5rem;
+    font-size: 1.1rem;
+}
+
+.health-preview .health-bar {
+    background-color: #77dd77;
+}
+
+#rest-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#rest-btn:hover {
+    background-color: #45a049;
+}
